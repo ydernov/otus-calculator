@@ -1,0 +1,23 @@
+{
+  "name": "otus-calculator",
+  "version": "0.0.1",
+  "description": "Console calculator",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/node": "^16.10.3",
+    "@types/webpack": "^5.28.0",
+    "@types/webpack-dev-server": "^4.3.0",
+    "eslint": "^7.32.0",
+    "ts-loader": "^9.2.6",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3",
+    "webpack": "^5.57.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.3.1"
+  }
+}
