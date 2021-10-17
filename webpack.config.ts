@@ -19,7 +19,7 @@ const config: webpack.Configuration = {
     ],
   },
   resolve: {
-    extensions: [".tsx", ".ts"],
+    extensions: [".ts"],
   },
   output: {
     filename: "calc_bundle.js",
