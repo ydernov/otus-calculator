@@ -1,8 +1,15 @@
 import * as path from "path";
-import * as webpack from "webpack";
+import { Configuration as WebpackConfiguration } from "webpack";
+import { Configuration as WebpackDevServerConfiguration } from "webpack-dev-server";
+import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 
-const config: webpack.Configuration = {
+interface Configuration extends WebpackConfiguration {
+  devServer?: WebpackDevServerConfiguration;
+}
+
+const config: Configuration = {
   // mode: 'production',
+  target: "node",
   entry: "./src/index.ts",
   module: {
     rules: [
@@ -19,11 +26,24 @@ const config: webpack.Configuration = {
     ],
   },
   resolve: {
-    extensions: [".ts"],
+    extensions: [".ts", ".js", "json"],
+    fallback: { util: require.resolve("util/") },
+
+    plugins: [new TsconfigPathsPlugin()],
   },
   output: {
-    filename: "calc_bundle.js",
+    filename: "index.js",
     path: path.resolve(__dirname, "dist"),
+  },
+
+  devServer: {
+    hot: true,
+    static: {
+      publicPath: path.resolve(__dirname, "dist"),
+    },
+  },
+  stats: {
+    errorDetails: true,
   },
 };
 
