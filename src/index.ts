@@ -1,8 +1,9 @@
-const testFunc = (a: number, b: number): number => a+b;
+import readline from "readline";
+import { initCalculator } from "main";
 
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
 
-
-
-
-
-export default testFunc;
+initCalculator(rl);
