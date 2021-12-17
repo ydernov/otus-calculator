@@ -6,13 +6,13 @@ Calculator with tests
 
 Available operations:
 
-- "+" - Addition - "1 + 2"
-- "-" - Subtraction - "1 - 2"
-- "\*" - Multiplication - "1 \* 2"
-- "/" - Division - "1 / 2"
-- "!" - Factorial - "2 !"
-- "\*\*" - Exponentiation with power 2 - "2 \*\*"
-- "^" - Exponentiation - "1 ^ 2"
+- \+ - Addition - "1 + 2"
+- \- - Subtraction - "1 - 2"
+- \* - Multiplication - "1 \* 2"
+- / - Division - "1 / 2"
+- ! - Factorial - "2 !"
+- \*\* - Exponentiation with power "2 - 2 \*\*"
+- ^ - Exponentiation - "1 ^ 2"
 
 Examples:
 
@@ -24,6 +24,6 @@ Examples:
 
 Operation priorities:
 
-1. "!", "\*\*", "^"
-2. "\*", "/"
-3. "+", "-"
+1. !, \*\*, ^
+2. \*, /
+3. +, -
