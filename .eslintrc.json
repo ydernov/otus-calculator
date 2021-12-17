@@ -4,25 +4,10 @@
     "es2021": true,
     "jest": true
   },
-  "extends": ["standard"],
+  "extends": ["standard", "prettier"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 12
   },
-  "plugins": ["@typescript-eslint"],
-  "rules": {
-    "semi": 0,
-    "no-unused-vars": "warn",
-    "quotes": "off",
-    "comma-dangle": [
-      "warn",
-      {
-        "arrays": "always-multiline",
-        "objects": "always-multiline",
-        "imports": "always-multiline",
-        "exports": "always-multiline",
-        "functions": "never"
-      }
-    ]
-  }
+  "plugins": ["@typescript-eslint"]
 }

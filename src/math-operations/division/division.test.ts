@@ -1,5 +1,23 @@
 import division from "./index";
 
+describe("Throw divide by zero ", () => {
+  it("should throw", () => {
+    expect(() => division(1, 0)).toThrow("Can't divide by zero!");
+  });
+
+  it("should throw", () => {
+    expect(() => division(100, 0)).toThrow("Can't divide by zero!");
+  });
+
+  it("should throw", () => {
+    expect(() => division(-100, 0)).toThrow("Can't divide by zero!");
+  });
+
+  it("should throw", () => {
+    expect(() => division(-100, -0)).toThrow("Can't divide by zero!");
+  });
+});
+
 describe("Return zero ", () => {
   it("should return 0", () => {
     expect(division(0, 4)).toBe(0);
@@ -43,23 +61,5 @@ describe("Return negative ", () => {
 
   it("should return -5", () => {
     expect(division(5, -1)).toBe(-5);
-  });
-});
-
-describe("Throw divide byzero ", () => {
-  it("should throw", () => {
-    expect(() => division(1, 0)).toThrow("Can't divide by zero!");
-  });
-
-  it("should throw", () => {
-    expect(() => division(100, 0)).toThrow("Can't divide by zero!");
-  });
-
-  it("should throw", () => {
-    expect(() => division(-100, 0)).toThrow("Can't divide by zero!");
-  });
-
-  it("should throw", () => {
-    expect(() => division(-100, -0)).toThrow("Can't divide by zero!");
   });
 });

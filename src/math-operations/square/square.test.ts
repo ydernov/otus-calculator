@@ -1,5 +1,5 @@
 import square from "./index";
-import * as exponentiation from "operations/exponentiation";
+import * as exponentiation from "math-operations/exponentiation";
 
 describe("Check call exponentiation func with result", () => {
   const spy = jest.spyOn(exponentiation, "default");
